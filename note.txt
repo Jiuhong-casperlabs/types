@@ -2,4 +2,4 @@ casper-client put-deploy --chain-name casper-test \
 --node-address http://16.162.124.124:7777 \
 --secret-key /home/jiuhong/my-project/keys/test12/secret_key.pem \
 --session-path /home/jiuhong/rust/type/contract/target/wasm32-unknown-unknown/release/contract.wasm   \
---payment-amount 4000000000 
+--payment-amount 1000000000 
