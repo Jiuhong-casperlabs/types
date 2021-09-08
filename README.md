@@ -1,3 +1,11 @@
+## store multiple layers of tuple
+
+path contract/src/multipletuples.rs
+
+## store multiple layers of map
+
+path contract/src/multiplemaps.rs
+
 ## create Uref from exisint uref string
 
 path contract/src/uref.rs
