@@ -24,21 +24,25 @@ use casper_types::{
 
 #[no_mangle]
 pub extern "C" fn call() {
-    let contract_hash = ContractHash::from_formatted_str(
-        "contract-4120116565bd608fAe6a45078055F320a2f429f426C86797b072B4EFD15B186A",
-    )
-    .unwrap();
+    let lower_contracthash =
+        "contract-4120116565bd608fAe6a45078055F320a2f429f426C86797b072B4EFD15B186A".to_lowercase();
+    let contract_hash = ContractHash::from_formatted_str(&lower_contracthash).unwrap();
 
-    let delegator = Key::from_formatted_str(
-        "account-hash-0fb415867b2799432c8cd341ff31800780f3aa5a975e1a526387b81c9e881b92",
+    let raw_address =
+        "account-hash-ad7e091267d82c3b9ed1987cb780a005a550e6b3d1ca333b743e2dba70680877"
+            // "account-hash-2293223427D59eBB331aC2221c3fcd1b3656a5Cb72BE924A6CdC9d52CdB6dB0F" jdk2
+            .to_lowercase();
+    let address = Key::from_formatted_str(
+        //
+        &raw_address,
     )
     .unwrap();
 
     let args = runtime_args! {
-        "address" => delegator,
+        "address" => address,
 
     };
 
     let balances: U256 = runtime::call_contract(contract_hash, "balance_of", args);
-    runtime::put_key("resulttype", storage::new_uref(balances).into());
+    runtime::put_key("mybalance", storage::new_uref(balances).into());
 }
