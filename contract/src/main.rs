@@ -4,9 +4,8 @@
 )]
 #![no_main]
 
-use std::collections::BTreeMap;
-
 use casper_contract::contract_api::{runtime, storage};
+use std::collections::BTreeMap;
 
 #[no_mangle]
 pub extern "C" fn call() {
