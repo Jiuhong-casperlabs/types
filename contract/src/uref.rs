@@ -4,14 +4,10 @@
 )]
 #![no_main]
 
-use std::{collections::BTreeMap, iter::Map};
+use std::collections::BTreeMap;
 
 use casper_contract::contract_api::{runtime, storage};
-use casper_types::{
-    AccessRights,
-    CLType::{self, Tuple3},
-    Key, URef,
-};
+use casper_types::URef;
 
 // All session code must have a `call` entrypoint.
 #[no_mangle]

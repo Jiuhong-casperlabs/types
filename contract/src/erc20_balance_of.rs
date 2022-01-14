@@ -7,20 +7,10 @@ compile_error!("target arch should be wasm32: compile with '--target wasm32-unkn
 // We need to explicitly import the std alloc crate and `alloc::string::String` as we're in a
 // `no_std` environment.
 extern crate alloc;
-use alloc::boxed::Box;
-use alloc::vec;
 
-use alloc::string::String;
+use casper_contract::contract_api::{runtime, storage};
 
-use casper_contract::{
-    contract_api::{runtime, storage},
-    unwrap_or_revert::UnwrapOrRevert,
-};
-
-use casper_types::{
-    runtime_args, CLType, CLValue, ContractHash, EntryPoint, EntryPointAccess, EntryPointType,
-    EntryPoints, Key, RuntimeArgs, U256,
-};
+use casper_types::{runtime_args, ContractHash, Key, RuntimeArgs, U256};
 
 #[no_mangle]
 pub extern "C" fn call() {

@@ -9,15 +9,12 @@ compile_error!("target arch should be wasm32: compile with '--target wasm32-unkn
 extern crate alloc;
 use alloc::boxed::Box;
 use alloc::vec;
-use alloc::{string::String, vec::Vec};
+use alloc::vec::Vec;
 
-use casper_contract::{
-    contract_api::{runtime, storage},
-    unwrap_or_revert::UnwrapOrRevert,
-};
+use casper_contract::contract_api::{runtime, storage};
 use casper_types::{
-    ApiError, CLType, CLTyped, EntryPoint, EntryPointAccess, EntryPointType, EntryPoints, Key,
-    Parameter, RuntimeArgs,
+    CLType, CLTyped, EntryPoint, EntryPointAccess, EntryPointType, EntryPoints, Key, Parameter,
+    RuntimeArgs,
 };
 
 #[no_mangle]

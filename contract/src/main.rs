@@ -15,8 +15,8 @@ pub extern "C" fn call() {
     let value2 = String::from("secondvalue");
     let mut map = BTreeMap::new();
 
-    map.insert(key1.clone(), value1.clone());
-    map.insert(key2.clone(), value2.clone());
+    map.insert(key1, value1);
+    map.insert(key2, value2);
 
     let token_metas = vec![map];
 

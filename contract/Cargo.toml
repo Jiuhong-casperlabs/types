@@ -16,6 +16,104 @@ bench = false
 doctest = false
 test = false
 
+[[bin]]
+name = "accessright"
+path = "src/accessright.rs"
+bench = false
+doctest = false
+test = false
+
+[[bin]]
+name = "accessright1"
+path = "src/accessright1.rs"
+bench = false
+doctest = false
+test = false
+
+[[bin]]
+name = "apierror"
+path = "src/ApiError.rs"
+bench = false
+doctest = false
+test = false
+
+[[bin]]
+name = "getbalance"
+path = "src/erc20_balance_of.rs"
+bench = false
+doctest = false
+test = false
+
+[[bin]]
+name = "listkeys"
+path = "src/listkeys.rs"
+bench = false
+doctest = false
+test = false
+
+[[bin]]
+name = "listofkeys"
+path = "src/listofkeys.rs"
+bench = false
+doctest = false
+test = false
+
+[[bin]]
+name = "mutiplemaps"
+path = "src/multiplemaps.rs"
+bench = false
+doctest = false
+test = false
+
+[[bin]]
+name = "multipletuples"
+path = "src/multipletuples.rs"
+bench = false
+doctest = false
+test = false
+
+[[bin]]
+name = "removekey"
+path = "src/remove_key.rs"
+bench = false
+doctest = false
+test = false
+
+[[bin]]
+name = "resulttype"
+path = "src/return_resulttype.rs"
+bench = false
+doctest = false
+test = false
+
+[[bin]]
+name = "storelist"
+path = "src/storelist.rs"
+bench = false
+doctest = false
+test = false
+
+[[bin]]
+name = "storemap"
+path = "src/storemap.rs"
+bench = false
+doctest = false
+test = false
+
+[[bin]]
+name = "storetuple"
+path = "src/storetuple.rs"
+bench = false
+doctest = false
+test = false
+
+[[bin]]
+name = "uref"
+path = "src/uref.rs"
+bench = false
+doctest = false
+test = false
+
 [features]
 default = ["casper-contract/std", "casper-types/std", "casper-contract/test-support"]
 
